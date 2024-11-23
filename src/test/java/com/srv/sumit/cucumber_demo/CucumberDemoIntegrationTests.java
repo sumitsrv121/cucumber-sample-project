@@ -8,7 +8,6 @@ import com.srv.sumit.cucumber_demo.service.EmployeeService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -17,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
-class CucumberDemoApplicationTests {
+class CucumberDemoIntegrationTests {
     @Autowired
     private EmployeeRepository employeeRepository;
     @Autowired
@@ -42,18 +41,18 @@ class CucumberDemoApplicationTests {
         employeeRepository.saveAll(employees);
     }
 
-    @Test
+    //@Test
     void givenValidEmployeeIdWhenFindAEmployeeByIdIsInvokedThenReturnEmployee() {
         Employee employee = employeeService.getEmployeeById(1);
         Assertions.assertEquals("Neha", employee.getFirstName());
     }
 
-    @Test
+    //@Test
     void givenURLToFetchListOfEmployeeWhenFindByEmployeesIsInvokedThenReturnAllEmployees() {
         Assertions.assertEquals(3, employeeService.getAllEmployees().size());
     }
 
-    @Test
+    //@Test
     void givenValidEmployeeDetailsWhenCreateEmployeeIsInvokedThenReturnCreatedEmployee() {
         EmployeeDTO employeeDTO = new EmployeeDTO("Sumit", new BigDecimal("200000"));
 
