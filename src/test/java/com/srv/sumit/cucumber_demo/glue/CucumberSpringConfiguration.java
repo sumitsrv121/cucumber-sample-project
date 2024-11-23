@@ -1,6 +1,7 @@
-package com.srv.sumit.cucumber_demo;
+package com.srv.sumit.cucumber_demo.glue;
 
 
+import com.srv.sumit.cucumber_demo.CucumberDemoApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 

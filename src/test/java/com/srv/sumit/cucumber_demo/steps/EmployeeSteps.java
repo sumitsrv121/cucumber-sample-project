@@ -60,9 +60,9 @@ public class EmployeeSteps implements En {
 
     void initData() {
         List<Employee> employees = new ArrayList<>();
-        employees.add(new Employee("Neha", "Choubey", new BigDecimal("5000")));
-        employees.add(new Employee("Vineet", "Choubey", new BigDecimal("1000")));
-        employees.add(new Employee("Aaditya", "Choubey", new BigDecimal("4000")));
+        employees.add(new Employee("Neha", "Sharma", new BigDecimal("5000")));
+        employees.add(new Employee("Vineet", "Verma", new BigDecimal("1000")));
+        employees.add(new Employee("Aaditya", "Singh", new BigDecimal("4000")));
         employeeRepository.saveAll(employees);
     }
 }
