@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
-class CucumberDemoIntegrationTests {
+class CucumberDemoIT {
     @Autowired
     private EmployeeRepository employeeRepository;
     @Autowired
